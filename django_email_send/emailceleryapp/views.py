@@ -1,7 +1,7 @@
 from django.core.mail import send_mail
 from django.shortcuts import render
 from django.http import HttpResponse
-from .tasks import sleepy, send_email_task
+from .tasks import send_email_task
 
 
 # Create your views here.

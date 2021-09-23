@@ -121,18 +121,23 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CELERY_BROKER_URL ='redis://h:p35dfc08bb5d2a659e408bc61dec2d58d0ed77ae61b5cd60e30d48b43e7ff7944@ec2-3-222-186-102.compute-1.amazonaws.com:11459'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
+CELERY_BROKER_URL='redis://127.0.0.1:6379'
+CELERY_RESULT_BACKEND='redis://127.0.0.1:6379'
+CELERY_ACCEPT_CONTENT=['application/json']
+CELERY_RESULT_SERIALIZER='json'
+CELERY_TASK_SERIALIZER='json'
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_HOST = 'smtp.fastmail.com'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = 'shilpi106yadav@gmail.com'
-EMAIL_HOST_PASSWORD = 'Aalok@123'
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '***********ghfhgfhgf@gmail.com'
+EMAIL_HOST_PASSWORD = 'mnmjkhjhouhuhu'
